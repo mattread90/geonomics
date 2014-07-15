@@ -7,7 +7,7 @@ import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
 
-import com.matt.geonomics.triangle.Triangle;
+import com.matt.geonomics.triangle.*;
 
 public class TriangleParser {
 	
@@ -31,15 +31,17 @@ public class TriangleParser {
 		try {
 			ArrayList<Node> nextRow;
 			do {
+				do {
+					
+				} while (tokenizer.ttype != StreamTokenizer.TT_EOL);
 				
 			} while (tokenizer.ttype != StreamTokenizer.TT_EOF);
-			tokenizer.nextToken();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
-		return Triangle;
+		return triangle;
 	}
 	
 }
