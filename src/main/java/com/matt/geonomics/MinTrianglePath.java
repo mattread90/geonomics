@@ -6,11 +6,11 @@ import com.matt.geonomics.parser.TriangleParser;
 import com.matt.geonomics.parser.TriangleParserException;
 import com.matt.geonomics.triangle.Triangle;
 
-public class Main {
-	
-	public static void main (String[] args) {
+public class MinTrianglePath {
+
+	public static void main(String[] args) {
 		TriangleParser parser = new TriangleParser(System.in);
-		
+
 		Triangle triangle = null;
 		try {
 			triangle = parser.parseInput();
@@ -21,7 +21,7 @@ public class Main {
 			e.printStackTrace();
 			System.exit(0);
 		}
-		
+
 		triangle.convertElementsToMinimalPathValues();
 		System.out.println(triangle.generateMinimalPathOutput());
 	}
